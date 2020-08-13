@@ -1,5 +1,7 @@
 package datastructures.binarytree;
 
+import java.util.Comparator;
+
 public class BinaryTree {
 
     private Node root;
@@ -220,7 +222,7 @@ public class BinaryTree {
 }
 
 
-class Node<T> {
+class Node<T> implements Comparable<Node> {
 
     private T ele;
     private Node<T> left;
@@ -386,5 +388,10 @@ class Node<T> {
         return "Node[" +
                 "ele=" + ele +
                 ']' + " ";
+    }
+
+    @Override
+    public int compareTo(Node o) {
+        return (Integer)this.ele-(Integer)o.ele;
     }
 }
