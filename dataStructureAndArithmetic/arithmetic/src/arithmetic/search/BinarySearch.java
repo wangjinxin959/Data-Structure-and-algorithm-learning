@@ -23,11 +23,11 @@ public class BinarySearch {
                 }else{
                     list.add(mid);
                     int temp = mid;
-                    while (temp >= 0 && arr[temp--] == val){
+                    while (temp >= 0 && arr[--temp] == val){
                         list.add(temp);
                     }
                     temp = mid;
-                    while (temp < arr.length && arr[temp++] == val){
+                    while (temp < arr.length && arr[++temp] == val){
                         list.add(temp);
                     }
                     break;
@@ -71,8 +71,8 @@ public class BinarySearch {
 
     public static void main(String[] args) {
         int[] arr = {2,4,8,8,10,15,30,34};
-        //List<Integer> list = binarySearch(arr, 30);
-        List<Integer> list = binarySearch2(arr, 8,0,7);
+        List<Integer> list = binarySearch(arr, 8);
+        //List<Integer> list = binarySearch2(arr, 8,0,7);
         System.out.println(list);
     }
 
