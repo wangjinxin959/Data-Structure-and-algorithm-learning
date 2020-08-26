@@ -46,7 +46,7 @@ public class ViolenceMatch {
         }
     }
 
-    //返回一个字符串的不分匹配值表
+    //返回一个字符串的部分匹配值表
     public int[] kmpNext (String dest) {
         int[] next = new int[dest.length()];
         next[0] = 0;
