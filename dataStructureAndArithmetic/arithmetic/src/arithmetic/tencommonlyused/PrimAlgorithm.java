@@ -74,11 +74,21 @@ class Graph {
     int verxs; //顶点的个数
     char[] data; //顶点的值
     int[][] weight; //边的权值
+    int[][] pre;//保存前驱顶点
 
     public Graph (int n) {
         verxs = n;
         data = new char[n];
         weight = new int[n][n];
+    }
+
+    public Graph (int length,char[] data,int[][] weight) {
+        this.data = data;
+        this.weight = weight;
+        pre = new int[length][length];
+        for (int i = 0; i < length; i++) {
+            Arrays.fill(pre[i],i);
+        }
     }
 
 }
