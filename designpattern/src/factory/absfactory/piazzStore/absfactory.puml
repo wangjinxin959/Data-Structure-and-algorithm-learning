@@ -1,0 +1,30 @@
+@startuml
+
+abstract class Pizza {
+    {abstract} void prepare();
+    void back();
+    void cut();
+    void box();
+}
+
+BJCheesePizza -up-|> Pizza
+LDCheesePizza -up-|> Pizza
+BJGreekPizza -up-|> Pizza
+LDGreekPizza -up-|> Pizza
+
+interface AbsFactory {
+    Pizza createPizza(String type);
+}
+
+BJFactory ..|> AbsFactory
+LDFactory ..|> AbsFactory
+
+BJFactory -up-> BJCheesePizza
+BJFactory -up-> BJGreekPizza
+
+LDFactory -up-> LDCheesePizza
+LDFactory -up-> LDGreekPizza
+
+OrderPizza o-right- AbsFactory
+
+@enduml

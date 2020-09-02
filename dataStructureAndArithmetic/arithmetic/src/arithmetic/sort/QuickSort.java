@@ -7,7 +7,7 @@ public class QuickSort {
     public static void quickSort(int[] arr,int left,int right){
         int i = left;
         int j = right;
-        int pivot = arr[(i+j)/2];
+        int pivot = arr[(i+j)/2];//3,4,5,7,6
         int temp = 0;
         while(i < j){
             while(arr[i] < pivot){
@@ -30,12 +30,13 @@ public class QuickSort {
 
     public static void main(String[] args) {
         long time = System.currentTimeMillis();
-        //int[] arr = {6,5,2,8,7,4,3}; // 3
-        int[] arr = new int[8000];
+        int[] arr = {3,1,5,4,8}; // 3
+        /*int[] arr = new int[8000];
         for (int i = 0; i < 8000; i++) {
             arr[i] = (int)(Math.random() * 8000);
-        }
+        }*/
         quickSort(arr,0,arr.length-1);//14 20
+        System.out.println(Arrays.toString(arr));
         System.out.println("共耗时: "+(System.currentTimeMillis() - time) + "ms");
     }
 

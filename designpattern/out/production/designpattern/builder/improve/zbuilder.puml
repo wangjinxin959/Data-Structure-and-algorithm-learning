@@ -1,0 +1,13 @@
+@startuml
+
+class Product /'产品'/
+abstract class Builder /'建造者'/
+class ConcreteBuilder  /'实际建造者'/
+class Direct        /'指挥者'/
+
+Product -right-* Builder
+ConcreteBuilder -up-|> Builder
+Builder <-right-o Direct
+
+
+@enduml

@@ -12,7 +12,7 @@ public class HeapSort {
 
     @Test
     public void test() {
-        int[] arr = {4,6,8,5,9,3,7,0};
+        int[] arr = {4,6,8,5,9};
         heapSort(arr);
         //System.out.println(Arrays.toString(arr));
     }

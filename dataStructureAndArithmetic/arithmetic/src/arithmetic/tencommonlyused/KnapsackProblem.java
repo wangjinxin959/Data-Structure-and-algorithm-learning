@@ -10,7 +10,7 @@ public class KnapsackProblem {
 
         int[] w = {1,4,3}; //物品的重量
         int[] val = {1500,3000,2000}; //物品的价值
-        int m = 3; //背包的容量
+        int m = 4; //背包的容量
         int n = w.length; //物品的个数
         int[][] v = new int[n+1][m+1];
         int[][] path = new int[n+1][m+1];

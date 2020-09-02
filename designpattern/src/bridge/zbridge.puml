@@ -1,0 +1,16 @@
+@startuml
+
+abstract class Phone
+interface Brand
+
+Xiaomi .up.|> Brand
+View .up.|> Brand
+
+Phone o-right- Brand
+
+FoldedPhone -up-|> Phone
+UpRighrPhone -up-|> Phone
+
+
+
+@enduml
